@@ -49,7 +49,6 @@ public class MyLinkedList {
 		return data;
 	}
 	
-	
 }
 
 
