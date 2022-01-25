@@ -1,23 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
-#define ll long long
-#define vi vector<int>
-#define vvi vector<vector<int>>
-#define gcd(x, y) __gcd(x, y)
-#define f(i, a, b) for(int i = a; i<b; i++)
-#define pi pair<int, int>
-#define vii vector<pi>
 int main() {
 	string s1, s2;cin>>s1>>s2;
-	vector<vector<pair<int, string>>> dp;
-
-	for(int i = s2.size() + 1; i >= 0; i--) {
-		vector<pair<int, string>> a;
-		for(int j = s1.size() + 1; j >= 0; j--) {
-			a.push_back({0, ""});
-		}
-		dp.push_back(a);
-	}
+	vector<vector<pair<int, string>>> dp(s2.size()+1, vector<pair<int, string>>(s1.size()+1, {0, ""}));
 	
 	for(int i = s1.size() - 1; i >= 0; i--) {
 		for(int j = s2.size() - 1; j >= 0;j--) {
