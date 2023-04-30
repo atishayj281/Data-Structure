@@ -10,13 +10,13 @@ int countPath_board(int s, int d, int n){
         return 0;
     }
     int count = 0;
-    for(int i = 1; i<=6; i++){
+    for(int i = 1; i<=3; i++){
         count += countPath_board(s+i, d, n);
     }
     return count;
 }
 
 int main(){
-    cout<<countPath_board(0, 3, 10);
+    cout<<countPath_board(0, 2, 10);
     return 0;
 }
